@@ -1,0 +1,50 @@
+h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.litarifs {
+    font-family: 'Barlow Semi Condensed', serif, sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 25px;
+}
+
+@media screen and (min-width: 640px) {
+    h1 {
+        margin-bottom: -2px;
+    }
+
+    .lutarifs {
+        flex-direction: column;
+        max-width: 1297px;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    h1 {
+        width: 1000px;
+        font-size: 70px;
+        margin-top: 100px;
+        }
+
+        .litarifs { 
+            margin-left: 200px;
+            margin-right: 100px;
+            text-align: initial;
+
+        }
+}
+
+@media screen and (min-width: 1214px) {
+    h1 {
+        font-size: 100px;
+        margin-top: 80px;
+    }
+
+    .litarifs { 
+        margin-left: 300px;
+        font-size: 26px;
+    }
+}

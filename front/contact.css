@@ -1,0 +1,72 @@
+main {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    width: 350px;
+    margin-bottom: 70px;
+}
+
+form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nom, .prénom {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0px 30px 0px;
+    border: white, 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 18px;
+}
+
+button {
+    margin-bottom: 50px;
+    width: 175px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (min-width: 940px) { 
+    main {
+        padding-left: 100px;
+        align-items: initial;
+    }
+
+    form {
+        width: 700px;
+    }
+
+    .nomprénom {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .prénom {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 1340px) {
+    main {
+        padding-left: 200px;
+    }
+
+    form {
+        width: initial;
+    }
+}

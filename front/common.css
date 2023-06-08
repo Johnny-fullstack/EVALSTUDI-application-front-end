@@ -1,0 +1,115 @@
+html {
+    background: url(../photo_accueil_0.8.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo {
+    background: url(../logo.PNG);
+    width: 351px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.social_med > a {
+    margin: 5px;
+    position: relative;
+    top: 15px;
+}
+
+h1 {
+    font-family:'Baskervville', serif, sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: -2px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+	list-style: none;
+    padding-inline-start: 0px;
+}
+
+li:not(button > li) {
+    text-align: center;
+    margin: 25px;
+}
+
+
+a, button {
+    text-decoration: none;
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 24px;
+}
+
+.nav_bar {
+    width: 285px;
+    height: 1px;
+    background-color: white;
+    display: block;
+    position: relative;
+}
+
+@media screen and (min-width: 640px) {
+    nav {
+        align-items: normal;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        margin: 5px 25px 5px 25px;
+    }
+
+    .nav_bar {
+        width: 583.54px;
+        height: 1px;
+        background-color: white;
+        left: 0px;
+    }
+}
+
+@media screen and (min-width: 940px) {   
+    html {
+        justify-content: normal;
+    }
+    
+    body {
+    margin: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    h1 {
+        text-align: left;
+        margin-top: 80px;
+        font-size: 100px;
+    }   
+}
