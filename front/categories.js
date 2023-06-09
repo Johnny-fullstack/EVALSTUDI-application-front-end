@@ -94,8 +94,6 @@ baptêmeCat.click(function () {
       chargerPhotos(baptêmeCat, baptême);
     },
     error: function (xhr, status, error) {
-      console.log(xhr);
-      console.log(status);
       console.log(error);
     }
   });
