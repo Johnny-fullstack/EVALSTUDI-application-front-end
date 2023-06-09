@@ -19,13 +19,6 @@ $(document).ready(() => {
   const mariage = $('#mariage1, #mariage2, #mariage3');
   const portrait = $('#portrait1, #portrait2, #portrait3');
 
-
-    // Choix de la catégorie
-
-//  aucuneCat.click(function() {
-//    baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'initial');
-//  });
-//
 //  baptêmeCat.click(function() {
 //    bébé.add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
 //    baptême.css('display', 'initial');
@@ -61,27 +54,28 @@ $(document).ready(() => {
 //    portrait.css('display', 'initial');
 //  });
 
-
-
- // Fonction pour charger les photos d'une catégorie via AJAX
- function chargerPhotos(categorie, photos) {
+  // Fonction pour charger les photos d'une catégorie via AJAX
+  function chargerPhotos(categorie, photos) {
   // Cacher toutes les photos
   baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
   
   // Afficher les photos de la catégorie sélectionnée
   photos.css('display', 'initial');
-}
+  };
+
+  function aucuneCat() {
+    baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'initial');
+  };
 
 // Choix de la catégorie
 
 // Aucune
-baptêmeCat.click(function () {
+aucuneCat.click(function () {
   $.ajax({
     url: 'Galerie.html',
     method: 'POST',
-    data: { categorie: 'baptême' },
     success: function (response) {
-      chargerPhotos(baptêmeCat, baptême);
+      aucuneCat();
     },
     error: function (xhr, status, error) {
       console.log(error);
@@ -94,7 +88,6 @@ baptêmeCat.click(function () {
   $.ajax({
     url: 'Galerie.html',
     method: 'POST',
-    data: { categorie: 'baptême' },
     success: function (response) {
       chargerPhotos(baptêmeCat, baptême);
     },
