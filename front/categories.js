@@ -72,7 +72,7 @@ $(document).ready(() => {
 // Aucune
 aucuneCat.click(function () {
   $.ajax({
-    url: 'Galerie.html',
+    url: '/front/Galerie.html',
     method: 'POST',
     data: JSON.stringify({ categorie: 'aucune' }),
     success: function (response) {
@@ -87,7 +87,7 @@ aucuneCat.click(function () {
 // Baptême
 baptêmeCat.click(function () {
   $.ajax({
-    url: 'Galerie.html',
+    url: '/front/Galerie.html',
     method: 'POST',
     data: JSON.stringify({ categorie: 'baptême' }),
     success: function (response) {
@@ -102,7 +102,7 @@ baptêmeCat.click(function () {
 // Bébé
 bébéCat.click(function () {
   $.ajax({
-    url: 'Galerie.html',
+    url: '/front/Galerie.html',
     method: 'POST',
     data: { categorie: 'bébé' },
     success: function (response) {
@@ -117,7 +117,7 @@ bébéCat.click(function () {
 // Couple
 coupleCat.click(function () {
   $.ajax({
-    url: 'Galerie.html',
+    url: 'front/Galerie.html',
     method: 'POST',
     data: { categorie: 'couple' },
     success: function (response) {
