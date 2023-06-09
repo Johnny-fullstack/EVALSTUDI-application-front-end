@@ -74,7 +74,7 @@ aucuneCat.click(function () {
   $.ajax({
     url: 'Galerie.html',
     method: 'POST',
-    data: { categorie: 'baptême' },
+    data: JSON.stringify({ categorie: 'aucune' }),
     success: function (response) {
       initial();
     },
@@ -87,7 +87,7 @@ aucuneCat.click(function () {
 // Baptême
 baptêmeCat.click(function () {
   $.ajax({
-    url: 'https://main--dapper-pegasus-9ff46c.netlify.app/front/Galerie.html',
+    url: 'Galerie.html',
     method: 'POST',
     data: { categorie: 'baptême' },
     success: function (response) {
