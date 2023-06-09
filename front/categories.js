@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    // Liste des catégories
+    // Liste des bouttons de catégories
   const aucuneCat = $('#Aucune');
   const baptêmeCat = $('#Baptême');
   const bébéCat = $('#Bébé');
@@ -19,174 +19,137 @@ $(document).ready(() => {
   const mariage = $('#mariage1, #mariage2, #mariage3');
   const portrait = $('#portrait1, #portrait2, #portrait3');
 
-//  baptêmeCat.click(function() {
-//    bébé.add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
-//    baptême.css('display', 'initial');
-//  });
-//
-//  bébéCat.click(function() {
-//    baptême.add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
-//    bébé.css('display', 'initial');
-//  });
-//
-//  coupleCat.click(function() {
-//    baptême.add(bébé).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
-//    couple.css('display', 'initial');
-//  });
-//
-//  familleCat.click(function() {
-//    bébé.add(couple).add(baptême).add(grossesse).add(mariage).add(portrait).css('display', 'none');
-//    famille.css('display', 'initial');
-//  });
-//
-//  grossesseCat.click(function() {
-//    bébé.add(couple).add(baptême).add(famille).add(mariage).add(portrait).css('display', 'none');
-//    grossesse.css('display', 'initial');
-//  });
-//
-//  mariageCat.click(function() {
-//    bébé.add(couple).add(famille).add(baptême).add(grossesse).add(portrait).css('display', 'none');
-//    mariage.css('display', 'initial');
-//  });
-//
-//  portraitCat.click(function() {
-//    bébé.add(couple).add(famille).add(grossesse).add(mariage).add(baptême).css('display', 'none');
-//    portrait.css('display', 'initial');
-//  });
-
-  // Fonction pour charger les photos d'une catégorie via AJAX
+  // Fonction pour charger les photos
   function chargerPhotos(categorie, photos) {
-  // Cacher toutes les photos
-  baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
-  
-  // Afficher les photos de la catégorie sélectionnée
-  photos.css('display', 'initial');
+    baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
+    photos.css('display', 'initial');
   };
 
+  // Fonction pour la catégorie 'Aucune'
   function initial() {
     baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'initial');
   };
 
-// Choix de la catégorie
+  // Choix de la catégorie
 
-// Aucune
-aucuneCat.click(function () {
-  $.ajax({
-    url: '/front/Galerie.html',
-    method: 'POST',
-    data: JSON.stringify({ categorie: 'aucune' }),
-    success: function (response) {
-      initial();
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Aucune
+  aucuneCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'aucune' },
+      success: function (response) {
+        initial();
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
-// Baptême
-baptêmeCat.click(function () {
-  $.ajax({
-    url: '/front/Galerie.html',
-    method: 'POST',
-    data: JSON.stringify({ categorie: 'baptême' }),
-    success: function (response) {
-      chargerPhotos(baptêmeCat, baptême);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Baptême
+  baptêmeCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'baptême' },
+      success: function (response) {
+        chargerPhotos(baptêmeCat, baptême);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
-// Bébé
-bébéCat.click(function () {
-  $.ajax({
-    url: '/front/Galerie.html',
-    method: 'POST',
-    data: { categorie: 'bébé' },
-    success: function (response) {
-      chargerPhotos(bébéCat, bébé);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Bébé
+  bébéCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'bébé' },
+      success: function (response) {
+        chargerPhotos(bébéCat, bébé);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
-// Couple
-coupleCat.click(function () {
-  $.ajax({
-    url: 'front/Galerie.html',
-    method: 'POST',
-    data: { categorie: 'couple' },
-    success: function (response) {
-      chargerPhotos(coupleCat, couple);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Couple
+  coupleCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'couple' },
+      success: function (response) {
+        chargerPhotos(coupleCat, couple);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
-// Famille
-familleCat.click(function () {
-  $.ajax({
-    url: 'Galerie.html',
-    method: 'POST',
-    data: { categorie: 'famille' },
-    success: function (response) {
-      chargerPhotos(familleCat, famille);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Famille
+  familleCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'famille' },
+      success: function (response) {
+        chargerPhotos(familleCat, famille);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
-// Grossesse
-grossesseCat.click(function () {
-  $.ajax({
-    url: 'Galerie.html',
-    method: 'POST',
-    data: { categorie: 'grossesse' },
-    success: function (response) {
-      chargerPhotos(grossesseCat, grossesse);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Grossesse
+  grossesseCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'grossesse' },
+      success: function (response) {
+        chargerPhotos(grossesseCat, grossesse);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
-// Mariage
-mariageCat.click(function () {
-  $.ajax({
-    url: 'Galerie.html',
-    method: 'POST',
-    data: { categorie: 'mariage' },
-    success: function (response) {
-      chargerPhotos(mariageCat, mariage);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Mariage
+  mariageCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'mariage' },
+      success: function (response) {
+        chargerPhotos(mariageCat, mariage);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
-// Portrait
-portraitCat.click(function () {
-  $.ajax({
-    url: 'Galerie.html',
-    method: 'POST',
-    data: { categorie: 'portrait' },
-    success: function (response) {
-      chargerPhotos(portraitCat, portrait);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    }
+  // Portrait
+  portraitCat.click(function () {
+    $.ajax({
+      url: 'front/Galerie.html',
+      method: 'POST',
+      data: { categorie: 'portrait' },
+      success: function (response) {
+        chargerPhotos(portraitCat, portrait);
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      }
+    });
   });
-});
 
 });
