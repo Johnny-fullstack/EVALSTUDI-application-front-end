@@ -23,12 +23,15 @@ $(document).ready(() => {
   function chargerPhotos(categorie, photos) {
     baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
     photos.css('display', 'initial');
+
+    aucuneCat.add(baptêmeCat).add(bébéCat).add(coupleCat).add(familleCat).add(grossesseCat).add(mariageCat).add(portraitCat).css('color', 'white');
     categorie.css('color', 'rgb(71, 85, 94)')
   };
 
   // Fonction pour la catégorie 'Aucune'
   function initial(categorie) {
     baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'initial');
+    baptêmeCat.add(bébéCat).add(coupleCat).add(familleCat).add(grossesseCat).add(mariageCat).add(portraitCat).css('color', 'white');
     categorie.css('color', 'rgb(71, 85, 94)')
   };
 
