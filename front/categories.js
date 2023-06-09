@@ -89,11 +89,13 @@ baptêmeCat.click(function () {
   $.ajax({
     url: 'Galerie.html',
     method: 'POST',
-    data: { categorie: 'baptême' },
+    data: JSON.stringify({ categorie: 'baptême' }),
     success: function (response) {
       chargerPhotos(baptêmeCat, baptême);
     },
     error: function (xhr, status, error) {
+      console.log(xhr);
+      console.log(status);
       console.log(error);
     }
   });
