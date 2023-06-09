@@ -63,7 +63,7 @@ $(document).ready(() => {
   photos.css('display', 'initial');
   };
 
-  function aucuneCat() {
+  function initial() {
     baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'initial');
   };
 
@@ -75,7 +75,7 @@ aucuneCat.click(function () {
     url: 'Galerie.html',
     method: 'POST',
     success: function (response) {
-      aucuneCat();
+      initial();
     },
     error: function (xhr, status, error) {
       console.log(error);
