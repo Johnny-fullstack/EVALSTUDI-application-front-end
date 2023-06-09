@@ -23,11 +23,13 @@ $(document).ready(() => {
   function chargerPhotos(categorie, photos) {
     baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'none');
     photos.css('display', 'initial');
+    categorie.css('color', 'rgb(71, 85, 94)')
   };
 
   // Fonction pour la catégorie 'Aucune'
-  function initial() {
+  function initial(categorie) {
     baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'initial');
+    categorie.css('color', 'rgb(71, 85, 94)')
   };
 
   // Choix de la catégorie
@@ -39,7 +41,7 @@ $(document).ready(() => {
       method: 'POST',
       data: { categorie: 'aucune' },
       success: function (response) {
-        initial();
+        initial(aucuneCat);
       },
       error: function (xhr, status, error) {
         console.log(error);

@@ -4,6 +4,10 @@ body {
 
 main {
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -22,13 +26,6 @@ nav {
 }
 
 /* Menu déroulant */
-
-.menu-déroulant {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .btn-menu {
     border: none;
@@ -75,6 +72,10 @@ ul > button {
     border: none;
 }
 
+button > li {
+    margin: 5px;
+}
+
 .menu-déroulant:hover .catégories {
     display: block;
     opacity: 1;
@@ -102,14 +103,41 @@ ul > button {
     }
 }
 
+.haut {
+margin-top: 20px;
+}
+
 @media screen and (min-width: 940px) {
+    main {
+        padding: 100px;
+    }
 
-}
+    nav {
+        align-items: initial;
+    }
 
-@media screen and (min-width: 1150px) {
-main {
-    padding: 100px;
-}
+    .menu-déroulant {
+        position: absolute;
+        top: 340px;
+        left: 100px;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .catégories {
+        opacity: 1;
+        max-height: none;
+    }
+
+    .catégories > .nav_bar {
+        width: 737.828px;
+    }
+
+    .catégories > ul {
+        flex-direction: row;
+    }
 }
 
 @media screen and (min-width: 1440px) {

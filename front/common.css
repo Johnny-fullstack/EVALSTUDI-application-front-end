@@ -50,7 +50,7 @@ ul {
     padding-inline-start: 0px;
 }
 
-li:not(button > li) {
+li {
     text-align: center;
     margin: 25px;
 }
@@ -82,13 +82,11 @@ a, button {
     }
 
     li {
-        margin: 5px 25px 5px 25px;
+        margin: 5px 25px;
     }
 
     .nav_bar {
         width: 583.54px;
-        height: 1px;
-        background-color: white;
         left: 0px;
     }
 }
