@@ -25,14 +25,14 @@ $(document).ready(() => {
     photos.css('display', 'initial');
 
     aucuneCat.add(baptêmeCat).add(bébéCat).add(coupleCat).add(familleCat).add(grossesseCat).add(mariageCat).add(portraitCat).css('color', 'white');
-    categorie.css('color', 'rgb(71, 85, 94)')
+    categorie.css('color', 'rgb(185, 178, 161)')
   };
 
-  // Fonction pour la catégorie 'Aucune'
+  // Fonction pour la catégorie 'Toutes'
   function initial(categorie) {
     baptême.add(bébé).add(couple).add(famille).add(grossesse).add(mariage).add(portrait).css('display', 'initial');
     baptêmeCat.add(bébéCat).add(coupleCat).add(familleCat).add(grossesseCat).add(mariageCat).add(portraitCat).css('color', 'white');
-    categorie.css('color', 'rgb(71, 85, 94)')
+    categorie.css('color', 'rgb(185, 178, 161)')
   };
 
   // Choix de la catégorie
