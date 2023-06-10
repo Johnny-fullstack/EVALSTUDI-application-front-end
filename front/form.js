@@ -34,7 +34,7 @@ form.addEventListener('submit', function(event) {
   
   // Fonction pour afficher le message de confirmation
 function afficherConfirmation() {
-    alert("Merci pour votre contribution Mr. ou Mme."+ nom + "\n" + "Votre message a été transmis avec succès.");
+    alert("Merci pour votre contribution Mr. ou Mme. "+ nom + "\n" + "Votre message a été transmis avec succès.");
   }
 
 });
