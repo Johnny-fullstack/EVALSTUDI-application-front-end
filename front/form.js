@@ -16,7 +16,7 @@ form.addEventListener('submit', function(event) {
   var emailBody = 'Objet : ' + objetD + '\n\n';
   emailBody += 'Message : ' + message + '\n\n';
   emailBody += 'Nom : ' + nom + '\n';
-  emailBody += 'Prénom : ' + prenom;
+  emailBody += 'Prénom : ' + prenom + '\n';
   emailBody += 'email : ' + email;
 
   sendEmail(emailBody);
@@ -26,9 +26,8 @@ form.addEventListener('submit', function(event) {
     var recipientEmail = 'johnny.kavu@gmail.com';
     
     // Envoi de l'e-mail fictif en utilisant l'API mailto
-    var mailtoLink = 'mailto:' + recipientEmail + '&body=' + encodeURIComponent(body);
+    'mailto:' + recipientEmail + '&body=' + encodeURIComponent(body);
 
-    window.open(mailtoLink)
     console.log(emailBody);
     afficherConfirmation();
   }
