@@ -3,7 +3,7 @@ function validateField(champId, regex, errorMessage) {
   var champ = document.getElementById(champId);
   var champValue = champ.value;
 
-  if (!regex.test(champValue)) {
+  if (regex.test(champValue)) {
       alert(errorMessage);
       champ.focus();
       return false;
@@ -19,10 +19,6 @@ document.getElementById('nom').addEventListener('blur', function() {
 
 document.getElementById('prénom').addEventListener('blur', function() {
   validateField('prénom', /<script.*?>.*?<\/script>/gi, "Veuillez entrer un prénom valide");
-});
-
-document.getElementById('email').addEventListener('blur', function() {
-  validateField('email', /\S+@\S+\.\S+/, "Veuillez entrer une adresse email valide");
 });
 
 document.getElementById('objetD').addEventListener('blur', function() {
@@ -49,7 +45,6 @@ form.addEventListener('submit', function(event) {
   if (!validateField('objetD', /<script.*?>.*?<\/script>/gi, "Veuillez entrer un objet valide") ||
       !validateField('nom', /<script.*?>.*?<\/script>/gi, "Veuillez entrer un nom valide") ||
       !validateField('prénom', /<script.*?>.*?<\/script>/gi, "Veuillez entrer un prénom valide") ||
-      !validateField('email', /\S+@\S+\.\S+/, "Veuillez entrer une adresse email valide") ||
       !validateField('message', /<script.*?>.*?<\/script>/gi, "Veuillez entrer un message valide")) {
     return;
   }
