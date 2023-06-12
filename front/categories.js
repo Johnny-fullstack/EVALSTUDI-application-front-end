@@ -43,7 +43,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'aucune' },
-      success: function (response) {
+      success: function () {
         initial(aucuneCat);
       },
       error: function (xhr, status, error) {
@@ -58,7 +58,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'baptême' },
-      success: function (response) {
+      success: function () {
         chargerPhotos(baptêmeCat, baptême);
       },
       error: function (xhr, status, error) {
@@ -73,7 +73,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'bébé' },
-      success: function (response) {
+      success: function () {
         chargerPhotos(bébéCat, bébé);
       },
       error: function (xhr, status, error) {
@@ -88,7 +88,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'couple' },
-      success: function (response) {
+      success: function () {
         chargerPhotos(coupleCat, couple);
       },
       error: function (xhr, status, error) {
@@ -103,7 +103,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'famille' },
-      success: function (response) {
+      success: function () {
         chargerPhotos(familleCat, famille);
       },
       error: function (xhr, status, error) {
@@ -118,7 +118,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'grossesse' },
-      success: function (response) {
+      success: function () {
         chargerPhotos(grossesseCat, grossesse);
       },
       error: function (xhr, status, error) {
@@ -133,7 +133,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'mariage' },
-      success: function (response) {
+      success: function () {
         chargerPhotos(mariageCat, mariage);
       },
       error: function (xhr, status, error) {
@@ -148,7 +148,7 @@ $(document).ready(() => {
       url: 'front/Galerie.html',
       method: 'POST',
       data: { categorie: 'portrait' },
-      success: function (response) {
+      success: function () {
         chargerPhotos(portraitCat, portrait);
       },
       error: function (xhr, status, error) {
