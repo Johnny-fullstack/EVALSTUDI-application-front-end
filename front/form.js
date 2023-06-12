@@ -23,7 +23,9 @@ form.addEventListener('submit', function(event) {
   function sendEmail(body) {
     var recipientEmail = 'johnny.kavu@gmail.com';
 
-    'mailto:' + recipientEmail + '&body=' + encodeURIComponent(body);
+    var mailtoLink = 'mailto:' + recipientEmail + '&body=' + encodeURIComponent(body);
+
+    window.open(mailtoLink);
 
     console.log(emailBody);
     envoiConfirmation();
