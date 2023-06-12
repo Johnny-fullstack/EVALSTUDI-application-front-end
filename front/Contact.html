@@ -49,24 +49,24 @@
 
                 <form method="post" action="form.js">
                     <label for="objetD">Indiquez l'objet de votre demande</label>
-                    <input name="objetD" id="objetD" type="text">
+                    <input name="objetD" id="objetD" type="text" pattern="^[^<>]+$" required>
 
                     <div class="nomprénom">
                         <div class="nom">
                         <label for="nom">Nom</label>
-                        <input name="nom" id="nom" type="text">
+                        <input name="nom" id="nom" type="text" pattern="^[^<>]+$" required>
                         </div>
                         <div class="prénom">
                         <label for="prénom">Prénom</label>
-                        <input name="nrénom" id="prénom" type="text">
+                        <input name="prénom" id="prénom" type="text" pattern="^[^<>]+$" required>
                         </div>
                     </div>
 
                     <label for="email">Email</label>
-                    <input name="email" id="email" type="email">
+                    <input name="email" id="email" type="email" required>
 
                     <label for="message">Message</label>
-                    <textarea rows="10" cols="110" name="message" id="message"></textarea>
+                    <textarea rows="10" cols="110" name="message" id="message" pattern="^[^<>]+$" required></textarea>
 
                     <button type="submit">Envoyer</button>
                 </form>
